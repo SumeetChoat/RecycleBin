@@ -1,0 +1,564 @@
+body {
+    font-family: var(--bs-body-font-family);
+    background-color: #172E08;
+}
+
+#settings_menu_container,
+#appointment_menu_container,
+#address_menu_container,
+#resident_menu_container {
+    position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color:#172E08a1;
+    
+      display: grid;
+      place-items: center;
+}
+
+#settings_menu,
+#address_menu,
+#resident_menu {
+    display: grid;
+    min-height: 70%;
+    width: 40%; 
+    background-color: white;
+    border-radius: 25px;
+}
+
+#appointment_menu {
+    display: grid;
+    height: 50%;
+    width: 60%; 
+    background-color: white;
+    border-radius: 25px;
+    align-items: center;
+}
+
+#settings_menu,
+#address_menu,
+#resident_menu{
+    place-items: center;
+}
+
+button[name="back_button"] {
+    display:grid;
+    position:absolute;
+    top:16%;
+    left:31%;
+    background-color: white;
+    font-size: 16px;
+    color:#dc3545;
+    border-color:#dc3545;
+    border-right: solid #dc3545;
+    border-bottom: solid #dc3545;
+    box-shadow: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 44px ;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+button[name="back_button"]:hover{
+    background-color: #dc3545;
+    color: white;
+    border-color: transparent;
+}
+
+button[name="back_button_appointments"] {
+    display:grid;
+    position:absolute;
+    top:26%;
+    left:21%;
+    background-color: white;
+    font-size: 16px;
+    color:#dc3545;
+    border-color:#dc3545;
+    border-right: solid #dc3545;
+    border-bottom: solid #dc3545;
+    box-shadow: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 44px ;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+button[name="back_button_appointments"]:hover{
+    background-color: #dc3545;
+    color: white;
+    border-color: transparent;
+}
+
+form[name="username_form"],
+form[name="password_form"],
+form[name="address_form"],
+form[name="create_address_form"],
+form[name="delete_address_form"],
+form[name="resident_admin_form"],
+form[name="resident_delete_form"] {
+    display:grid;
+    place-items: center;
+    position:absolute;
+}
+
+form[name="username_form"]{
+    top:28%;
+}
+
+form[name="password_form"]{
+    top:42%;
+}
+
+form[name="address_form"] {
+    top:60%
+}
+
+form[name="delete_address_form"]{
+    top:58%;
+}
+
+form[name="create_address_form"] {
+    position:absolute;
+    top:30%
+}
+
+form[name="resident_admin_form"] {
+    position:absolute;
+    top:39%;
+}
+
+form[name="resident_delete_form"] {
+    position:absolute;
+    top:60%;
+}
+
+#florin_and_user {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+div[name="whole_page"] {
+    position:fixed;
+    top:5%;
+    left:10%;
+    width:80%;
+    height:90%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    border-color: #172E08;
+    border-width: 5px;
+}
+
+img[name= "image"] {
+    position: absolute;
+    width: 100.1%;
+    top:5%;
+    left:-0.05%;
+    clip-path: inset(65px 0 65px 0);
+}
+
+div[name="pop_up_container"] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000a1;
+
+    display: grid;
+    place-items: center;
+}
+
+div[name="pop_up"] {
+    display: grid;
+    min-height: 30%;
+    width: 30%; 
+    background-color: white;
+    border-radius: 25px;
+    border: 1px solid black;
+    place-items: center;
+}
+
+p[name="title"] {
+    font-size: 30px;
+    position: absolute;
+    top:19%;
+
+
+}
+
+p[name="title_appointments"] {
+    font-size: 30px;
+    position: absolute;
+    top:28%;
+    left: 50%;
+    margin-left: -163.65px;
+
+
+}
+
+p[name="big_title"] {
+    font-size: 48px;
+    position:absolute;
+    left: 50%;
+    top: 12%;
+    z-index: 1;
+    margin-left: -68.9px;
+    color:white;
+
+}
+
+div[name = "popup_buttons"] {
+    display:grid;
+}
+
+div[name = "dropdown_section"] {
+    position:relative;
+    display: inline-block;
+}
+
+div[name = "dropdown_content"] {
+    display:block;
+    position: absolute;
+    z-index: 1;
+    max-height:200px;
+    overflow:scroll;
+}
+
+div[name="user_dropdown"] {
+    display:inline-block;
+    position:absolute;
+    top:6%;
+    right: 5%;
+}
+
+div[name="user_dropdown_content"] {
+    display:none;
+    position: absolute;
+    z-index: 1;
+}
+
+div[name="user_dropdown"]:hover div[name="user_dropdown_content"] {display:block;}
+
+p[name="wastewise"] {
+    font-family: var(--bs-body-font-family);
+    font-size: 20px;
+    position:absolute;
+    top:4%;
+    left:50%;
+    margin-left: -47.93px;
+}
+
+p[name="title_popup"] {
+    font-size: 30px;
+    position: absolute;
+    top:33%;
+  }
+  
+  #form_label_popup {
+    font-size:20px;
+    position: absolute;
+    top:42%;
+    text-align: center;
+    width: 30%;
+  }
+  
+  div[name = "popup_buttons"] {
+    display:grid;
+    position: absolute;
+    top:55%;
+  }
+
+div[name="wastewise"] {
+    position:absolute;
+    top:6%;
+    left:5%;
+}
+
+#drop_down_btn {
+    background-color: white;
+    font-size: 16px;
+    color:#198754;
+    border-color:#198754;
+    border-right: solid #198754;
+    border-bottom: solid #198754;
+    box-shadow: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 44px ;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+#drop_down_btn:hover{
+    background-color: #198754;
+    color: white;
+    border-color: transparent;
+}
+
+#confirm_button {
+    background-color: white;
+    font-size: 16px;
+    color:#198754;
+    border-color:#198754;
+    border-right: solid #198754;
+    border-bottom: solid #198754;
+    box-shadow: none;
+    border-radius: 10px;
+    width: 127px;
+    height: 38px ;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+#confirm_button_settings {
+    background-color: white;
+    font-size: 16px;
+    color:#198754;
+    border-color:#198754;
+    border-right: solid #198754;
+    border-bottom: solid #198754;
+    box-shadow: none;
+    border-radius: 10px;
+    width: 155px;
+    height: 38px ;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+#confirm_button:hover,
+#confirm_button_settings:hover {
+    background-color: #198754;
+    color: white;
+    border-color: transparent;
+}
+
+#defirm_button{
+    background-color: white;
+    font-size: 16px;
+    color:#dc3545;
+    border-color:#dc3545;
+    border-right: solid #dc3545;
+    border-bottom: solid #dc3545;
+    box-shadow: none;
+    border-radius: 10px;
+    width: 127px;
+    height: 38px ;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+#defirm_button:hover{
+    background-color:#dc3545;
+    color: white;
+    border-color: transparent;
+}
+
+#function_button {
+    background-color: white;
+    color:#198754;
+    border-color:#198754;
+    border-right: solid #198754;
+    border-bottom: solid #198754;
+    box-shadow: none;
+    border-radius: 10px;
+    width: 200px;
+    height: 88px ;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+#function_button:hover{
+    background-color: #198754;
+    color: white;
+    border-color: transparent;
+}
+
+button[name=resident_database] {
+    position:absolute;
+    left:15%;
+    bottom:30%;
+    font-size: 20px;
+}
+
+button[name=address_database] {
+    position:absolute;
+    right:15%;
+    bottom:30%;
+    font-size: 20px;
+}
+
+button[name=appointments] {
+    position:absolute;
+    bottom:12%;
+    font-size: 20px;
+}
+
+
+div[name="main_buttons"] {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+#text_input {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: var(--bs-border-radius);
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+#form_label {
+    font-size:20px;
+}
+
+
+table {
+    position: absolute;
+    left: 24%;
+    width: 55%;
+    height: 30%;
+    top: 40%;
+}
+
+tr[name = "title_row"]{
+    font-size: 20px;
+    font-style: oblique;
+}
+
+tr {
+    font-size: 18px;
+}
+
+button[name="Log_out"]{
+    color:#dc3545 !important;
+    border-color:#dc3545 !important;;
+    border-right: solid #dc3545 !important;;
+    border-bottom: solid #dc3545 !important;;
+}
+
+button[name="Log_out"]:hover {
+    background-color:#dc3545 !important;
+    color: white !important;
+}
+
+#footer{
+    position:absolute;
+    bottom: 5%;
+    left:11%;
+  }
+
+
+
+
+
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-black: #000;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: 13, 110, 253;
+    --bs-secondary-rgb: 108, 117, 125;
+    --bs-success-rgb: 25, 135, 84;
+    --bs-info-rgb: 13, 202, 240;
+    --bs-warning-rgb: 255, 193, 7;
+    --bs-danger-rgb: 220, 53, 69;
+    --bs-light-rgb: 248, 249, 250;
+    --bs-dark-rgb: 33, 37, 41;
+    --bs-white-rgb: 255, 255, 255;
+    --bs-black-rgb: 0, 0, 0;
+    --bs-body-color-rgb: 33, 37, 41;
+    --bs-body-bg-rgb: 255, 255, 255;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bs-body-font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #212529;
+    --bs-body-bg: #fff;
+    --bs-border-width: 1px;
+    --bs-border-style: solid;
+    --bs-border-color: #dee2e6;
+    --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+    --bs-border-radius: 0.375rem;
+    --bs-border-radius-sm: 0.25rem;
+    --bs-border-radius-lg: 0.5rem;
+    --bs-border-radius-xl: 1rem;
+    --bs-border-radius-2xl: 2rem;
+    --bs-border-radius-pill: 50rem;
+    --bs-link-color: #0d6efd;
+    --bs-link-hover-color: #0a58ca;
+    --bs-code-color: #d63384;
+    --bs-highlight-bg: #fff3cd;
+  }
